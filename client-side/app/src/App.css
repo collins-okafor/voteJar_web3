@@ -77,17 +77,19 @@
 .candidates-table {
   border-collapse: collapse;
   width: 50%;
+   /* background-color: #0069d9; */
   text-align:center;
 }
 
 .candidates-table th, .candidates-table td {
   padding: 8px;
   text-align: left;
+  /* background-color: #0069d9; */
   border-bottom: 1px solid #ddd;
 }
 
 .candidates-table th {
-  background-color: #f2f2f2;
+  background-color: #381052;
 }
 
 input[type=number] {
