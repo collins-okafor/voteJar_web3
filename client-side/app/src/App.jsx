@@ -44,6 +44,10 @@ function App()
     const contractInstance = new ethers.Contract(
       contractAddress, contractAbi, signer
     );
+
+    const transaction = await contractInstance.vote(number);
+    await transaction.wait();
+    canVote();
   }
 
   async function canVote()
