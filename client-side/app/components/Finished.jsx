@@ -9,8 +9,8 @@ const Finished = (props) =>
                 </br>
                 <br>
                 </br>
-                Your number one decentralized voting platform</h1>
-            <button className="login-button" onClick={props.connectWallet}> Connect Wallet</button>
+                You can try again next time</h1>
+            {/* <button className="login-button" onClick={props.connectWallet}> Connect Wallet</button> */}
         </div>
     )
 }
