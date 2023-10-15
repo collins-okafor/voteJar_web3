@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { contractAbi, contractAddress } from '../constants/constant';
 import Login from '../components/Login';
+import Finished from '../components/Finished';
 import Connected from '../components/connected';
  
 import './App.css'
@@ -19,6 +20,7 @@ function App()
 
   useEffect(() =>
   {
+    // setVotingStatus(false);
     getCandidates();
     getRemainingTime();
     getCurrentStatus();
@@ -151,12 +153,16 @@ function App()
 
   return (
     <div className='App'>
-      {isConnected ? (<Connected
+      {votingStatus ? (isConnected ? (<Connected
         account={account}
         candidates={candidates}
         remainingTime={remainingTime}
         number={number}
-        handleNumberChange={handleNumberChange} />) : (<Login connectWallet={connectToWallet} />)}
+        handleNumberChange={handleNumberChange}
+        voteFunction={vote}
+        showButton={CanVote} />)
+        :
+        (<Login connectWallet={connectToWallet} />)) : (<Finished />)}
       
     </div>
   )

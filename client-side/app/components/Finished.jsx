@@ -1,10 +1,10 @@
 import React from "react";
 
-const Login = (props) =>
+const Finished = (props) =>
 {
     return (
         <div className="login-container">
-            <h1 className="welcome-message">Welcome to VoteJar
+            <h1 className="welcome-message">Voting time has ended
                 <br>
                 </br>
                 <br>
@@ -15,4 +15,4 @@ const Login = (props) =>
     )
 }
 
-export default Login
+export default Finished

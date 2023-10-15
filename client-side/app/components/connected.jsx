@@ -7,12 +7,17 @@ const Connected = (props) =>
             <h1 className="connected-header">Connected to wallet</h1>
             <p className="connected-account">Wallet Account: { props.account}</p>
             <p className="connected-account">Remaining Time: {props.remainingTime}</p>
+            {props.showButton ? (
+                <p className="connected-account">You have already voted</p>
+            ) : (
+                <div>
+                    <input type="number" placeholder="Enter Candidate Index" value={props.number} onChange={props.handleNumberChange}></input>
+                    <br/>
+                    <button className="login-button" onClick={props.voteFunction}>Vote</button>
+                </div>
+            )}
             
-            <div>
-                <input type="number" placeholder="Enter Candidate Index" value={props.number} onChange={props.handleNumberChange}></input>
-                <br/>
-                <button className="login-button" onClick={props.voteFunction}>Vote</button>
-            </div>
+            
 
             <table id="myTable" className="candidates-table">
                 <thead>
