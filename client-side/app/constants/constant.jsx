@@ -1,4 +1,4 @@
-const contractAddress = '0x0254069e0A3269dfa927a1dc96A7EAff74502929';
+const contractAddress = '0x61D2201740eCFfA5cA593299Ead386b6e6E9Bc0c';
 
 const contractAbi = [
     {
@@ -10,7 +10,7 @@ const contractAbi = [
             },
             {
                 "internalType": "uint256",
-                "name": "_durationInMinutes",
+                "name": "_durationInDays",
                 "type": "uint256"
             }
         ],
