@@ -14,7 +14,7 @@ contract Voting {
     uint256 public votingStart;
     uint256 public votingEnd;
 
-constructor(string[] memory _candidateNames, uint256 _durationInMinutes) {
+constructor(string[] memory _candidateNames, uint256 _durationInDays) {
     for (uint256 i = 0; i < _candidateNames.length; i++) {
         candidates.push(Candidate({
             name: _candidateNames[i],
@@ -23,7 +23,7 @@ constructor(string[] memory _candidateNames, uint256 _durationInMinutes) {
     }
     owner = msg.sender;
     votingStart = block.timestamp;
-    votingEnd = block.timestamp + (_durationInMinutes * 1 minutes);
+    votingEnd = block.timestamp + (_durationInDays * 1 days);
 }
 
     modifier onlyOwner {
